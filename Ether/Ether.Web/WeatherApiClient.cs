@@ -1,12 +1,14 @@
+using Ether.ServiceDefaults.Entities;
+
 namespace Ether.Web;
 
 public class WeatherApiClient(HttpClient httpClient)
 {
-    public async Task<WeatherForecast[]> GetWeatherAsync(int maxItems = 10, CancellationToken cancellationToken = default)
+    public async Task<Product[]> GetWeatherAsync(int maxItems = 10, CancellationToken cancellationToken = default)
     {
-        List<WeatherForecast>? forecasts = null;
+        List<Product>? forecasts = null;
 
-        await foreach (var forecast in httpClient.GetFromJsonAsAsyncEnumerable<WeatherForecast>("/weatherforecast", cancellationToken))
+        await foreach (var forecast in httpClient.GetFromJsonAsAsyncEnumerable<Product>("/api/v1/products", cancellationToken))
         {
             if (forecasts?.Count >= maxItems)
             {
@@ -21,9 +23,4 @@ public class WeatherApiClient(HttpClient httpClient)
 
         return forecasts?.ToArray() ?? [];
     }
-}
-
-public record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
