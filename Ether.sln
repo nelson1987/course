@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ether.Web", "Ether\Ether.We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ether.Tests", "Ether\Ether.Tests\Ether.Tests.csproj", "{CC200F87-C0BC-4AEC-B6FB-BEE11FF6EB6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark.Metrics", "Benchmark.Metrics\Benchmark.Metrics.csproj", "{8819A86A-446B-4C1A-83D2-01DDC1180F9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CC200F87-C0BC-4AEC-B6FB-BEE11FF6EB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC200F87-C0BC-4AEC-B6FB-BEE11FF6EB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC200F87-C0BC-4AEC-B6FB-BEE11FF6EB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8819A86A-446B-4C1A-83D2-01DDC1180F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8819A86A-446B-4C1A-83D2-01DDC1180F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8819A86A-446B-4C1A-83D2-01DDC1180F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8819A86A-446B-4C1A-83D2-01DDC1180F9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
